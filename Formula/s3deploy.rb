@@ -1,9 +1,9 @@
 class S3deploy < Formula
   desc "Deploy static websites to Amazon S3 with Gzip and headers support."
   homepage "https://github.com/bep/s3deploy"
-  url "https://github.com/bep/s3deploy/releases/download/v2.0.2/s3deploy_2.0.2_macOS-64bit.tar.gz"
-  version "2.0.2"
-  sha256 "16c804466c4662ed9bf53f153067fbd41f8d6dd9afcf54e694c8c8fd81d64ce9"
+  url "https://github.com/bep/s3deploy/releases/download/v2.2.0/s3deploy_2.2.0_macOS-64bit.tar.gz"
+  version "2.2.0"
+  sha256 "4ce14bf8bdce3d535fc45ac07d21baab989a70748dfe9a959333f1e42ad469e9"
 
   def install
     bin.install "s3deploy"
