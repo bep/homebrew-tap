@@ -5,32 +5,32 @@
 class S3deploy < Formula
   desc "Deploy static websites to Amazon S3 with Gzip and headers support."
   homepage "https://github.com/bep/s3deploy"
-  version "2.4.0"
+  version "2.5.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bep/s3deploy/releases/download/v2.4.0/s3deploy_2.4.0_macOS-64bit.tar.gz"
-      sha256 "693c1a70b208c772a521c805a6397057853149570e849459f868164039deb93d"
+      url "https://github.com/bep/s3deploy/releases/download/v2.5.0/s3deploy_2.5.0_macOS-64bit.tar.gz"
+      sha256 "163e238fde17e4e1d753490ba88f8247c70c30a1764c13cfee1b0f7fbf70cb74"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bep/s3deploy/releases/download/v2.4.0/s3deploy_2.4.0_macOS-ARM64.tar.gz"
-      sha256 "0f4e4af0311e27fa6d05c1ed69e2361b88d15ceed039afd67d1f895e5ea57b89"
+      url "https://github.com/bep/s3deploy/releases/download/v2.5.0/s3deploy_2.5.0_macOS-ARM64.tar.gz"
+      sha256 "4d4f4359272f9e6e12483fe016424ccd4fa73f33a72abdc6b503631ec7961b1a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bep/s3deploy/releases/download/v2.4.0/s3deploy_2.4.0_Linux-64bit.tar.gz"
-      sha256 "aff0ca6af7db7368d4fcd1eda19955b98bb5c5dfd81ad5a42edf3582e39a7260"
+      url "https://github.com/bep/s3deploy/releases/download/v2.5.0/s3deploy_2.5.0_Linux-64bit.tar.gz"
+      sha256 "7bd3841f0b70f5c2ef61694ee6b90090c787ef6e76e55adf9e978ae62a8d52b7"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/bep/s3deploy/releases/download/v2.4.0/s3deploy_2.4.0_Linux-ARM.tar.gz"
-      sha256 "9fec0948ee22eb487210b5dfbbcf4f5e74b34f14eba8101028de3fc8d4419630"
+      url "https://github.com/bep/s3deploy/releases/download/v2.5.0/s3deploy_2.5.0_Linux-ARM.tar.gz"
+      sha256 "263512efc570392fd8e606a1c62b22858920f57908b158c70a74be3eec06bd0e"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bep/s3deploy/releases/download/v2.4.0/s3deploy_2.4.0_Linux-ARM64.tar.gz"
-      sha256 "0d7567f08ceb6dde6f9477bea440283720b95e6a328121921b2d9d4a8f5eec8a"
+      url "https://github.com/bep/s3deploy/releases/download/v2.5.0/s3deploy_2.5.0_Linux-ARM64.tar.gz"
+      sha256 "95d9347eed75cdba1277a33c8f41b2246d8b335f18f8eb00c29292265aa88753"
     end
   end
 
