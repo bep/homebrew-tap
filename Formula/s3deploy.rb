@@ -5,37 +5,52 @@
 class S3deploy < Formula
   desc "Deploy static websites to Amazon S3 with Gzip and headers support."
   homepage "https://github.com/bep/s3deploy"
-  version "2.5.0"
-  bottle :unneeded
+  version "2.5.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bep/s3deploy/releases/download/v2.5.0/s3deploy_2.5.0_macOS-64bit.tar.gz"
-      sha256 "163e238fde17e4e1d753490ba88f8247c70c30a1764c13cfee1b0f7fbf70cb74"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/bep/s3deploy/releases/download/v2.5.0/s3deploy_2.5.0_macOS-ARM64.tar.gz"
-      sha256 "4d4f4359272f9e6e12483fe016424ccd4fa73f33a72abdc6b503631ec7961b1a"
+      url "https://github.com/bep/s3deploy/releases/download/v2.5.1/s3deploy_2.5.1_macOS-ARM64.tar.gz"
+      sha256 "ebbe4b9b859583d3f862ea31c187063c79f805716170701b1dec4f0f93190792"
+
+      def install
+        bin.install "s3deploy"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/bep/s3deploy/releases/download/v2.5.1/s3deploy_2.5.1_macOS-64bit.tar.gz"
+      sha256 "43be8bfd924aadc18982924778659ed879af6fea4355347368ae01b56fc50392"
+
+      def install
+        bin.install "s3deploy"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bep/s3deploy/releases/download/v2.5.0/s3deploy_2.5.0_Linux-64bit.tar.gz"
-      sha256 "7bd3841f0b70f5c2ef61694ee6b90090c787ef6e76e55adf9e978ae62a8d52b7"
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/bep/s3deploy/releases/download/v2.5.0/s3deploy_2.5.0_Linux-ARM.tar.gz"
-      sha256 "263512efc570392fd8e606a1c62b22858920f57908b158c70a74be3eec06bd0e"
+      url "https://github.com/bep/s3deploy/releases/download/v2.5.1/s3deploy_2.5.1_Linux-ARM.tar.gz"
+      sha256 "e4340e5ef9bfd4ca2f54a5dbce55c6930e966d25e289c3ecf0d8843d72358d53"
+
+      def install
+        bin.install "s3deploy"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/bep/s3deploy/releases/download/v2.5.1/s3deploy_2.5.1_Linux-64bit.tar.gz"
+      sha256 "3c3905a640c5235ab7d2b7bc2d9c9481d526b2195dace69c14047a1b5ea3681f"
+
+      def install
+        bin.install "s3deploy"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bep/s3deploy/releases/download/v2.5.0/s3deploy_2.5.0_Linux-ARM64.tar.gz"
-      sha256 "95d9347eed75cdba1277a33c8f41b2246d8b335f18f8eb00c29292265aa88753"
-    end
-  end
+      url "https://github.com/bep/s3deploy/releases/download/v2.5.1/s3deploy_2.5.1_Linux-ARM64.tar.gz"
+      sha256 "d2de753bbb029628dd55d0bd21308f4e73dad5dc678b20cc40ddfd9edbbf0922"
 
-  def install
-    bin.install "s3deploy"
+      def install
+        bin.install "s3deploy"
+      end
+    end
   end
 
   test do
