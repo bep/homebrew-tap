@@ -1,13 +1,13 @@
 cask "s3deploy" do
-  version "2.14.0"
-  sha256 "20bfa8dc286580a8f6ca50ef6fce6b5ba65426ca3d14b569ed7892466c4c1ba1"
+  version "2.15.0"
+  sha256 "09d42e5d2854b9720772355b7317a765c585bfa82231d012e5dff2288802a8aa"
 
-  url "https://github.com/bep/s3deploy/releases/download/v2.14.0/s3deploy_2.14.0_darwin-universal.pkg"
+  url "https://github.com/bep/s3deploy/releases/download/v2.15.0/s3deploy_2.15.0_darwin-universal.pkg"
   name "s3deploy"
   desc ""
   homepage "https://github.com/bep/s3deploy"
 
-  pkg "s3deploy_2.14.0_darwin-universal.pkg"
+  pkg "s3deploy_2.15.0_darwin-universal.pkg"
 
   uninstall pkgutil: "com.bepsays.s3deploy"
 end
